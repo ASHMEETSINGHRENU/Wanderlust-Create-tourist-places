@@ -1,1 +1,236 @@
 
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-footer {
+    background-color: rgb(163, 163, 163); 
+    color: #333; 
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+
+  }
+  
+.navbar {
+    height: 5rem;
+    background-color: white;    
+}
+.fa-person {
+    color: rgb(179, 104, 104);
+    font-size: 2rem;
+}
+
+
+.main-contain {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: aliceblue;
+}
+
+
+
+.main-footer .f-icon, #icon-1, #icon-2, #icon-3 {
+    font-size: 1.5rem;
+    padding-right: 15px;
+  
+} 
+
+
+.main-footer .f-icon #icon-1:hover{
+    color: rgb(28, 68, 178);
+}
+.main-footer .f-icon #icon-2:hover{
+    color: rgb(13, 198, 41);
+}
+.main-footer .f-icon #icon-3:hover{
+    color: rgb(17, 117, 199);
+}
+.f-heading,.f-policy {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.main-footer .f-policy:hover {
+    text-decoration: underline rgb(250, 249, 249);
+}
+
+.col-md a{
+    text-decoration: none;
+}
+
+.col-md{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card .card-img-top{
+    width: 25rem;
+    height: 23rem;
+    border: 1px solid white;
+    border-radius: 10%;
+}
+
+.card .card-img-top:hover{
+    border: 2px solid black;
+    border-radius: 10%;  
+} 
+
+.card-body .card-text{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.price{
+    width: 40%;
+}
+.price:hover{
+    text-decoration: underline;
+} 
+
+
+/* new ejs / edit.ejs  */
+ form{
+    margin-bottom: 4rem;
+}
+.heading-new-listing{
+    margin-top: 2rem;
+    width: 100%;
+    height: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+
+.btn{
+    margin-top: 1rem;
+    width: 100%;
+    height: 4rem;
+}
+.btn button{
+    background-color: black;
+    color: aliceblue;
+    width: 40%;
+    height: 100%;
+    text-transform: uppercase;
+}
+.btn button:hover{
+    color: black;
+    background-color: aliceblue;
+}
+
+.form-control{
+    text-transform: uppercase;
+} 
+
+
+/* show.ejs */
+
+#show-btn {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#show-link {
+    margin-top: 1rem;
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+}
+#show-link a{ 
+     padding-left: 4rem;
+    padding-right: 4rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: aliceblue;
+    background-color: black;
+    border: 2px solid black;
+}
+
+#show-link a:hover{
+    background-color: aliceblue;
+    color: black;
+
+}
+#delete-btn {
+    margin-top: 1rem;
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+}
+#delete-btn button{
+    background-color: rgb(255, 5, 5);
+    color: aliceblue;
+    width: 40%;
+    height: 100%;
+    text-transform: uppercase;
+}
+#delete-btn button:hover{
+    color: rgb(255, 5, 5);
+    background-color: aliceblue;
+}
+ 
+
+.show-img {
+    border: 2px solid black;
+    border-radius: 15px;
+} 
+
+
+
+/* reviews  */
+/* public/css/styles.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  /* Add more styles as needed */
+  
