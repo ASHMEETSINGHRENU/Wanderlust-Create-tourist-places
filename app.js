@@ -48,6 +48,17 @@ const validateListing = (req, res, next) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 // All links is here.....
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "view"));
