@@ -1,28 +1,40 @@
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
 
-<div class="container-fluid">
-    <a class="navbar-brand" href="#"><i class="fa-solid fa-hotel"></i>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" >
-    <span class="navbar-toggler-icon">
-    </span>
-    </button>
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-hotel"></i>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" >
+      <span class="navbar-toggler-icon">
+      </span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  
+        <div class="navbar-nav">
+                <a class="nav-link " href="/listings">All listings</a>
+              <a class="nav-link " href="/listings/new"> Add new listing</a>
+        </div>
+        <div class="navbar-nav ms-auto">
+          
+          <% if (isAuthenticated) { %>
+            <li class="nav-item">  
+              <a class="nav-link" href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup">Sign-up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Log-in</a>
+</li>
+          <% } %>
 
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-
-      <div class="navbar-nav">
-              <a class="nav-link " href="/listings">All listings</a>
-            <a class="nav-link " href="/listings/new"> Add new listing</a>
+        </div>
+      </div> 
       </div>
-      <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="/signup">Sign-up</a>
-          <a class="nav-link" href="/login">Log-in</a>
-          <a class="nav-link" href="/logout"> <i class="fa fa-sign-out" aria-hidden="true"></i> </a>
-    </div>
-     
-
-    </div>
-</div>
-</nav>
-
+  </div>
+  </nav>
+  
+  <ul class="navbar-nav">
+    
+  </ul>
