@@ -14,7 +14,10 @@ const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 const session = require('express-session');
 const { error } = require("console");
+const { saveRedirectUrl } = require("./middlewarer.js");
 const{isLoggedIn} = require("./middlewarer.js");
+
+
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 
@@ -111,21 +114,30 @@ app.post('/submitForm', async(req, res) => {
     let { username, email, password } = req.body;
     const newUser = new User({email, username});
     const registeredUser = await User.register(newUser, password);
-    console.log(registeredUser);
     req.flash("success", " registration completed ");
     res.redirect('/login');
   });
 
 // loggin page 
-app.get('/login', (req, res) => {
+app.get('/login', 
+  (req, res) => {
   res.render('user/login');
 });
 
-app.post('/login',   passport.authenticate("local", { failureRedirect: '/login', failureFlash: true}), 
+
+
+app.post('/login', 
+  saveRedirectUrl,
+
+  passport.authenticate("local", { failureRedirect: '/login', failureFlash: true}), 
 async(req, res) => {
   req.flash("success", "welcome to wandulust ");
-  res.redirect("/listings");
+  let redirectUrl = res.locals.redirectUrl || "/listings"
+  res.redirect(redirectUrl);
 });
+
+
+
 
 //  log-out page 
 app.get("/logout", (req, res, next) => {
@@ -159,9 +171,11 @@ app.get("/listings/:id", wrapAsync (async (req, res) => {
 const { id } = req.params;
 const listing = await Listing.findById(id).populate('reviews');
 
+
     if (!listing) {
       return res.status(404).send("Listing not found");
     }
+    console.log(listing);
     res.render("listings/show.ejs", { listing });
 }));
 
@@ -253,7 +267,8 @@ app.use((err, req , res, next) => {
 
 
 
-
+// for start 
+// node app.js
 
 
 
